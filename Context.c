@@ -2,16 +2,25 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Context.h"
+#include "ConcretStrategyA.h"
+#include "ConcretStrategyB.h"
 
 Context* Context_New()
 {
-    return (Context*)malloc(sizeof(Context));
+    Context *cont = malloc(sizeof(Context));
+    return cont;
 }
-void ContextConstruct(IStrategy*this)
-{
-    IStrategy IStrategy;
+void SetStrategy(Context* cont, IStrategy* this)
+{    
+    IStrategy* IStrategy=this;
+    cont->_strategy=this;
 }
 void ContextConstruct(IStrategy*this)
 {
     free(this);
+}
+void DoSomeBusinessLogic(Context* cont, IStrategy* tipo)
+{
+    printf("Context: Sorting data using the strategy (not sure how it'll do it)");
+    
 }

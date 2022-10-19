@@ -3,14 +3,14 @@
 #include "IStrategy.h"
 typedef struct
 {
-    IStrategy _strategy;
+    IStrategy* _strategy;
 }Context;
 
 Context* Context_New();
 
 void ContextConstruct(IStrategy*);
 void ContextDestruct(IStrategy*);
-void SetStrategy(IStrategy*);
+void SetStrategy(Context*, IStrategy*);
 void DoSomeBusinessLogic();
 
 #endif
