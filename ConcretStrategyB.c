@@ -5,19 +5,25 @@
 #include "IStrategy.h"
 #include "ConcretStrategyB.h"
 
-ConcretStrategyB* StrategyNew()
+ConcretStrategyB* newStrategyB()
 {
     return(ConcretStrategyB*)malloc(sizeof(ConcretStrategyB));
 }
 
-void __DoAlgorithm(char data[])
+char __DoAlgorithmB()
 {
-    int longitud = strlen(data);
+    char data1 [4];
+    data1[0]="a";
+    data1[1]="b";
+    data1[2]="c";
+    data1[3]="d";
+    int longitud = strlen(data1);
     int i;
-    for (i = 0; i < strlen(data) / 2; i++)
+    for (i = 0; i < strlen(data1) / 2; i++)
     {
-        char temporal = data[i];
-        data[i] = data[longitud - i - 1];
-        data[longitud - i - 1] = temporal;
+        char temporal = data1[i];
+        data1[i] = data1[longitud - i - 1];
+        data1[longitud - i - 1] = temporal+",";
     }
+    return data1;
 }

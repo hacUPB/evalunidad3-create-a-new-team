@@ -22,5 +22,6 @@ void ContextConstruct(IStrategy*this)
 void DoSomeBusinessLogic(Context* cont, IStrategy* tipo)
 {
     printf("Context: Sorting data using the strategy (not sure how it'll do it)");
-    
+    char data=cont->_strategy->doit((IStrategy*)tipo);
+    printf("%s",data);
 }

@@ -6,5 +6,5 @@ typedef struct
     IStrategy strategy;
 }ConcretStrategyA;
 ConcretStrategyA *newStrategyA();
-void Do_algorithm(IStrategy*);
+//void Do_algorithm(IStrategy*);
 #endif
