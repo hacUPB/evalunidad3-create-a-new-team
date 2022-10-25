@@ -12,14 +12,14 @@ ConcretStrategyA* newStrategyA()
 char __DoAlgorithmA()
 {
     char data [4];
-    data[0]="a";
-    data[1]="b";
-    data[2]="c";
-    data[3]="d";
+    data[0]='a';
+    data[1]='b';
+    data[2]='c';
+    data[3]='d';
     int i;
     for (i = 0; i < strlen(data); i++)
     {
-        data[i] = data[i]+",";
+        data[i] = data[i]+',';
     }
     return data;
 }
